@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html,
+body,
+#__nuxt {
+  font-family: Inter var, ui-sans-serif, system-ui, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  height: 100%;
+  scroll-behavior: smooth;
+  background: #262626;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+  transition: all 500ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
+  border-radius: 5px;
+}
+
+.title-shadow {
+  text-shadow: #a78bfa 1px 2px 10px, #ff00ff -1px -2px 10px,
+    #00ff00 2px -2px 10px;
+}
+
+.labelTitle::after {
+  animation: loading 7s linear alternate infinite;
+}
+
+#about::before {
+  border-radius: 75% 25% 22% 78% / 54% 43% 57% 46%;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 139, 250, 1) 0%,
+    rgba(76, 29, 149, 1) 70%
+  );
+}
+
+#info::before {
+  border-radius: 38% 62% 55% 45% / 48% 79% 21% 52%;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 139, 250, 1) 0%,
+    rgba(76, 29, 149, 1) 70%
+  );
+}
+
+.swiperCustom {
+  width: 100%;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip-text {
+  visibility: hidden;
+}
+
+.loading-bar::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: #a78bfa;
+  height: 5px;
+  animation: loading-bar 2s ease-in;
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 10%;
+    color: #e5e7eb;
+    background-color: #e5e7eb;
+  }
+  100% {
+    width: 100%;
+    color: #a78bfa;
+    background-color: #a78bfa;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .main-container {
+    display: none;
+  }
+  .navbar-wrapper {
+    display: none;
+  }
+  .error-container {
+    display: flex;
+  }
+}
