@@ -3,5 +3,5 @@ export const useAsset = (path: string): string => {
     eager: true,
     import: "default",
   });
-  return "/_nuxt/assets/dynamic/" + path;
+  return assets["/assets/dynamic" + path];
 };
