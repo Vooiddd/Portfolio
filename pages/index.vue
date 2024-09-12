@@ -26,7 +26,7 @@
         </p>
       </div>
       <img
-        src="@/assets/personal-pic.jpg"
+        src="@/assets/personal-pic.svg"
         alt="Leonardo Milanesi Picture"
         class="w-56 md:w-72 lg:w-86 justify-self-center md:justify-self-end self-center rounded-full z-10 selected-none"
       />
@@ -44,18 +44,18 @@
       >
         <CardMap />
         <CardBackground
-          title="leonardo.milanesi.06@gmail.com"
+          title="leonardo.milanesi789@examplemail.com"
           desc="My mail is in here! It's a treasure trove of news, surprises, and
           heartfelt messages."
           bg="bg-mail"
         />
         <CardBackground
-          title="+39 370 313 5876"
+          title="+39 012 234 5678"
           desc="This box contains my phone number, which is a way to reach me for important calls or messages."
           bg="bg-phone"
         />
         <CardBackground
-          title="@leonardo.milanesi_"
+          title="@techwhiz_leo_23"
           desc="This box contains my Instagram account, where I share photos, videos, and stories with my friends."
           bg="bg-social"
         />
