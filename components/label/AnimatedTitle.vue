@@ -18,7 +18,7 @@ const startAnimation = () => {
         currentLetter = 1;
         currentQuote.value = firstChar.value;
       }
-    }, 175);
+    }, 125);
   } else {
     currentQuote.value = quote;
   }
@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <h1
-    class="title-shadow text-gray-300 absolute text-xl md:text-3xl lg:text-4xl text-center font-bold uppercase max-w-sm md:max-w-md max-[500px]:max-w-xs bottom-64 h-1/5 select-none z-10"
+    class="title-shadow text-gray-300 absolute text-xl md:text-2xl lg:text-3xl text-center font-bold uppercase max-w-72 sm:max-w-sm md:max-w-lg bottom-64 h-1/5 select-none z-10"
   >
     {{ currentQuote }}
   </h1>

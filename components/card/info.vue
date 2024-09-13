@@ -12,7 +12,7 @@ const imageUrl = ref(useAsset(props.url));
 
 <template>
   <div
-    class="flex flex-col justify-center items-center h-64 w-72 bg-neutral-900 rounded-xl hover:border-2 hover:border-white hover:border-solid shadow-md"
+    class="flex flex-col justify-center items-center h-64 w-72 bg-neutral-900 rounded-xl md:hover:border-2 md:hover:border-white md:hover:border-solid shadow-md"
   >
     <div class="w-28 h-28 flex items-center p-1 rounded-md">
       <img
@@ -24,6 +24,6 @@ const imageUrl = ref(useAsset(props.url));
     <h1 class="pt-5 font-semibold text-md md:text-lg xl:text-lg select-none">
       {{ title }}
     </h1>
-    <h2 class="px-3 text-xs md:text-sm xl:text-md">{{ text }}</h2>
+    <h2 class="px-3 text-xs md:text-sm xl:text-md selected-none">{{ text }}</h2>
   </div>
 </template>
