@@ -10,15 +10,16 @@ let currentLetter = 1;
 
 const startAnimation = () => {
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (currentLetter < quote.length) {
         currentQuote.value += quote[currentLetter];
         currentLetter++;
       } else {
-        currentLetter = 1;
-        currentQuote.value = firstChar.value;
+        clearInterval(interval);
       }
     }, 125);
+    currentQuote.value = firstChar.value;
+    currentLetter = 1;
   } else {
     currentQuote.value = quote;
   }

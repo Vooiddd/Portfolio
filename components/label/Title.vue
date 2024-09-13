@@ -1,30 +1,31 @@
 <script setup lang="ts">
 const percentage = ref("");
 let loadingBar: any;
-let parentContainer;
+let parentContainer: any;
 
 const props = defineProps({
   text: { type: String, required: true },
 });
 
 const loadingAnimation = () => {
-  setInterval(() => {
-    const loadingWidth: any = window
-      .getComputedStyle(loadingBar, "::after")
-      .width.split("p")[0];
-    const parentWidth: any = window
-      .getComputedStyle(loadingBar)
-      .width.split("p")[0];
-    percentage.value = ((loadingWidth / parentWidth) * 100)
-      .toString()
-      .slice(0, 4);
-  }, 100);
+  if (loadingBar && parentContainer) {
+    setInterval(() => {
+      const loadingWidth: any = window
+        .getComputedStyle(loadingBar, "::after")
+        .width.split("p")[0];
+      const parentWidth: any = window
+        .getComputedStyle(loadingBar)
+        .width.split("p")[0];
+      percentage.value = ((loadingWidth / parentWidth) * 100)
+        .toString()
+        .slice(0, 5);
+    }, 100);
+  }
 };
 
 onMounted(() => {
   loadingBar = document.querySelector(".labelTitle");
-  parentContainer = loadingBar.parentElement;
-
+  parentContainer = loadingBar?.parentElement;
   loadingAnimation();
 });
 </script>
